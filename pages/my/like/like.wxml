@@ -1,0 +1,35 @@
+<!--index.wxml-->
+
+<view class="contain">
+
+
+  <block wx:for-items="{{cell}}" wx:key="item.id">
+
+    <!--课程cell-->
+    <view class="item" >
+
+      <!--图片-->
+      <view class="item-left">
+        <image class="courseImage" src="{{item.image}}" />
+      </view>
+
+      <!--文字-->
+      <view class="item-right">
+        <view class="titleView">
+          <text class="titleText">{{item.title}}</text> </view>
+        <view class="timeView">
+          <text class="timeText">{{item.time}}</text>  
+          </view>
+        <view class="priceView">
+          <text class="gradeText">{{item.grade}}</text>
+          <text class="priceText">{{item.price}}</text> </view>
+      </view>
+
+    </view>
+
+  </block>
+
+
+
+
+</view>

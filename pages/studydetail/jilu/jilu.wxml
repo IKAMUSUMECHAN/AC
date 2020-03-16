@@ -1,0 +1,13 @@
+<!--pages/studydetail/jilu/jilu.wxml-->
+<view class='title'><text class='tt'>在线学习</text></view>
+<text class='t'>签到率：0.0%</text>
+<view class='line'></view>
+<text class='t'>讨论：发布数6</text>
+<view class='line'></view>
+<text class='t'>答疑：发布数6</text>
+<view class='line'></view>
+<text class='t'>访问：76次</text>
+<view class='title'><text class='tt'>作业</text></view>
+<text class='t'>作业次数：7次</text>
+<view class='title'><text class='tt'>视频</text></view>
+<text class='t'>观看次数：7次</text>

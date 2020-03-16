@@ -1,0 +1,72 @@
+<view class="contain">
+
+
+  <view class='topbox'>
+    <image class="userinfo-avatar" src="{{picture}}"></image>
+    <view wx:if="{{userstate}}">
+      <text class='toptextbox'>{{student.name}}同学，你已学习{{student.day}}天</text>
+      <text class='topbtn' bindtap='qiandao'>签到</text>
+    </view>
+
+    <view wx:if="{{denglu}}">
+      <text class='toptextbox' bindtap='tologin'>你还未登录，请点击登录</text>
+    </view>
+  </view>
+
+
+
+  <!-- <scroll-view scroll-x> -->
+  <view class='forecast-list' style='background:#deeef6'>
+    <view class='forecast-item'bindtap='toqianbao'>
+      <text class='forecast-item-title'>余额</text>
+      <text class='forecast-item-content'>61</text>
+    </view>
+    <view class='forecast-item' bindtap='tomypinglun'>
+      <text class='forecast-item-title'>评论</text>
+      <text class='forecast-item-content'>6</text>
+    </view>
+    <view class='forecast-item'>
+      <text class='forecast-item-title'>积分</text>
+      <text class='forecast-item-content'>77</text>
+    </view>
+  </view>
+
+
+  <scroll-view>
+
+    <!--表格-->
+    <block>
+      <view class="item" bindtap='toqianbao'>
+        <image class="icon" src="/images/ICON/bag.png"></image>
+        <label>我的钱包</label>
+        <image class="arrow" src=""></image>
+      </view>
+
+      <view class="item" bindtap='toorder'>
+        <image class="icon" src="/images/ICON/order.png"></image>
+        <label>我的订单</label>
+        <image class="arrow" src=""></image>
+      </view>
+      
+      <view class="item" bindtap='tomypinglun'>
+        <image class="icon" src="/images/ICON/pj.jpg"></image>
+        <label>我的评论</label>
+        <image class="arrow" src=""></image>
+      </view>
+
+      <view class="item" bindtap='tolike'>
+        <image class="icon" src="/images/ICON/like.png"></image>
+        <label>我的收藏</label>
+        <image class="arrow" src=""></image>
+      </view>
+
+      <view class="item" bindtap='toepassword'>
+        <image class="icon" src="/images/ICON/e.png"></image>
+        <label>修改密码</label>
+        <image class="arrow" src=""></image>
+      </view>
+    </block>
+
+  </scroll-view>
+
+</view>

@@ -1,0 +1,27 @@
+<!-- 表单 -->
+<form bindsubmit="formSubmit">
+  <input type="text" name="liuyantitle" placeholder='输入提问标题' class="input-style" />
+  <textarea type="text" name="liuyantext" placeholder='输入提问内容' class="input-style2" />
+  <button formType="submit" class="btn" >提问</button>
+  <input type="text" name="nickname" value='{{nickName}}' style="display:none;" />
+  <input type="text" name="headimg" value='{{avatarUrl}}' style="display:none;" />
+</form>
+
+<view wx:for="{{re}}" wx:key="re">
+  <view class="result">{{item.result}}</view>
+</view>
+
+
+<view wx:for="{{liuyanlist}}" wx:key="liuyanlist" class="liuyanview">
+
+  <view class="nickname_liuyantext">
+    <view class="nickname">{{item.nickName}}
+      <view class="time">{{item.lytime}}</view>
+    </view>
+    <view class="text">问：{{item.liuyantext}}</view> 
+    <view class="text">描述：{{item.detail}}</view> 
+    <view class="text">答：{{item.da}}</view>
+  </view>
+  <!-- 占位符 -->
+  <view style="width:100%;height:10px;"></view>
+</view>

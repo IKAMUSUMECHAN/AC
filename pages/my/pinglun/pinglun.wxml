@@ -1,0 +1,13 @@
+<view wx:for="{{re}}" wx:key="re">
+  <view class="result">{{item.result}}</view>
+</view>
+
+<view wx:for="{{liuyanlist}}" wx:key="liuyanlist" class="liuyanview" id='{{item.commentCourseid}}'bindtap='toclassdetail'>
+  <view class="headimg"><image src="{{gid}}"></image></view>
+  <view class="nickname_liuyantext">
+    <view class="nickname">{{userInfo.nickName}} <view class="time">{{item.lytime}}</view></view>
+    <view class="text">{{item.commentDetail}} </view><view class="text1">点击查看此课程</view>
+  </view>
+  <!-- 占位符 -->
+  <view style="width:100%;height:10px;"></view>
+</view>

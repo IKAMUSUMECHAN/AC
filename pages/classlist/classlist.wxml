@@ -1,0 +1,37 @@
+
+<searchHaveHistory id="history" bind:searchEvent="searchEvent">
+</searchHaveHistory>
+<view class="contain">
+
+
+  <block wx:for-items="{{cell}}" wx:key="item.id">
+
+    <!--课程cell-->
+    <view class="item" bindtap='toclassdetail'>
+
+      <!--图片-->
+      <view class="item-left">
+        <image class="courseImage" src="{{item.courseImg}}" />
+      </view>
+
+ <!--文字-->
+      <view class="item-right">
+        <view class="titleView">
+          <text class="titleText">{{item.courseName}}</text> </view>
+        <view class="timeView">
+          <text class="timeText">{{item.teacherName}}老师</text> </view>
+        <view class="priceView">
+        <view wx:if="{{item.courseDifficult==1}}"><text class="gradeText">适合初学者</text></view>
+        <view wx:if="{{item.courseDifficult==2}}"><text class="gradeText">适合有一定基础的学生</text></view>
+        <view wx:if="{{item.courseDifficult==3}}"><text class="gradeText">适合需要提高的学生</text></view>
+          <text class="priceText">￥{{item.coursePrice}}</text> </view>
+      </view>
+
+    </view>
+
+  </block>
+
+
+
+
+</view>

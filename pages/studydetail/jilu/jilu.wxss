@@ -1,0 +1,16 @@
+/* pages/studydetail/jilu/jilu.wxss */
+.line{
+  border-bottom:1px solid rgba(128, 128, 128, 0.4);
+  margin-top: 10rpx;
+}
+.title{
+  background-color: rgba(128, 128, 128, 0.4);
+  font-size: 35rpx;
+  height: 55rpx;
+}
+.tt{
+  color: grey
+}
+.t{
+  font-size: 38rpx;
+}

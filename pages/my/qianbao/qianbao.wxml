@@ -1,0 +1,29 @@
+<!--pages/wallet/index.wxml-->
+<view class="container">
+  <view class="overage">
+
+    <view>
+      <text class="overage-header">我的余额（元）</text>
+    </view>
+
+    <view>
+      <text class="overage-amount">61</text>
+    </view>
+
+    <view>
+      <text bindtap="overageDesc" class="overage-desc">余额说明</text>
+    </view>
+
+    <view class="bg" bindtap='hideview2' style='display:{{display2}}'></view>
+    <view class="show" bindtap='hideview2' style='display:{{display2}}'>您的余额只能用来购买本程序里的课程
+    </view>
+
+  </view>
+
+  <button bindtap="showview" class="btn-charge">充值</button>
+  <view class="bg" bindtap='hideview' style='display:{{display}}'></view>
+  <view class="show" bindtap='hideview' style='display:{{display}}'>充值成功
+    <view class='txt'>本次充值：100元</view>
+  </view>
+  
+</view>

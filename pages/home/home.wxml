@@ -1,0 +1,79 @@
+<!--pages/home/home.wxml-->
+<view class='topbox'>
+
+  <text class='toptextbox'>{{student.name}}同学的个人成绩</text>
+</view>
+
+<view class='radarContainer'>
+  <canvas class='radarCanvas' canvas-id='radarCanvas'></canvas>
+  <view class='powerbox'>
+    <text class='list1'>学习等级：13级</text>
+    <text class='list1'>学习积分：20分</text>
+    <text class='list1'>当前排名：633名</text>
+    <text class='list1'>当前段位：AC菜鸟</text>
+  </view>
+</view>
+
+<view class='linebox'>
+  <view class="title">
+    <view wx:if="{{!isMainChartDisplay}}" class="back-btn" bindtap="backToMainChart">返回</view>
+    {{chartTitle}}
+  </view>
+  <canvas canvas-id="columnCanvas" class="canvas" bindtouchstart="touchHandler"></canvas>
+</view>
+
+<view class='weekbox'>
+  <text>成绩周报</text>
+</view>
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">上课次数</view>
+    <view class="th">完成题目</view>
+    <view class="th">AC题目</view>
+    <view class="th">正确率</view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{code}}">
+    <view class="tr" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.code}}</view>
+      <view class="td">{{item.text}}</view>
+      <view class="td">{{item.date}}</view>
+      <view class="td">{{item.fen}}</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.code}}</view>
+      <view class="td">{{item.text}}</view>
+      <view class="td">{{item.date}}</view>
+      <view class="td">{{item.fen}}</view>
+    </view>
+  </block>
+</view>
+
+<view class='weekbox1'>
+  <text>名次</text>
+</view>
+
+    <view class="table">
+      <view class="tr bg-w">
+        <view class="th">名次</view>
+        <view class="th">姓名</view>
+        <view class="th">学校</view>
+        <view class="th">学习积分</view>
+        <view class="th">ac题目</view>
+      </view>
+      <block wx:for="{{listData2}}" wx:key="{{code}}">
+        <view class="tr" wx:if="{{index % 2 == 0}}">
+          <view class="td">{{item.code}}</view>
+          <view class="td">{{item.text}}</view>
+          <view class="td">{{item.date}}</view>
+          <view class="td">{{item.fen}}</view>
+          <view class="td">{{item.ti}}</view>
+        </view>
+        <view class="tr" wx:else>
+          <view class="td">{{item.code}}</view>
+          <view class="td">{{item.text}}</view>
+          <view class="td">{{item.date}}</view>
+          <view class="td">{{item.fen}}</view>
+          <view class="td">{{item.ti}}</view>
+        </view>
+      </block>
+    </view>

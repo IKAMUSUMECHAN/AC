@@ -1,0 +1,211 @@
+/* pages/home/home.wxss */
+.topbox{
+  display: flex;
+  width: 100%;
+  height: 200rpx;
+  background-image: url("https://boilinggame.cn/1.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.topbtn{
+  position: relative;
+  width: 120rpx;
+  height: 80rpx;
+  top: 55rpx;
+  left: 100rpx;
+}
+.toptextbox{
+   position: relative;
+  	top: 70rpx;
+	  left: 22%;
+    font-size: 45rpx
+    
+}
+.userinfo-avatar {
+	  position: relative;
+	  top: 15rpx;
+	  left: 300rpx;
+  	width: 120rpx;
+  	height: 120rpx;
+  	border-radius: 50%;
+  	border: 3rpx solid #fff;
+}
+.radarContainer{
+   background-color: rgba(1, 173, 256, 0.5);
+   background-image: url("https://boilinggame.cn/2.jpg");
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+   width:100%;
+   height:120px;
+   display: flex;
+   justify-content:center;
+   align-items: center; 
+   position: relative;
+}
+.powerbox{
+  position: relative;
+  height: 100%;
+  width: 200px;
+  left: 120px;
+}
+.list{
+  display: block;
+  color:rgb(0, 0, 0);
+  font-size: 16px;
+}
+.list1{
+  display: block;
+  color:rgba(0, 0, 0, 0.616);
+  font-size: 17px;
+}
+.radarCanvas{
+   left: 0rpx;
+   width:200px;
+   height:230px;
+   margin: 0 auto;
+   position: absolute;
+}
+.linebox{
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-color: rgb(255, 255, 255)
+}
+.title {
+	text-align: center;
+	position: relative;
+	margin-bottom: 20rpx;
+}
+.back-btn {
+	position: absolute;
+	left: 20rpx;
+	top: 0;
+}
+.weekbox{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 30px;
+  margin-top: 10rpx;
+  background-color: rgba(185, 189, 190, 0.2);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.weekbox1{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 30px;
+
+  background-color: rgba(185, 189, 190, 0.2);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.classbox{
+  position:relative;
+  width: 100%;
+  height: auto;
+}
+.homeclass{
+  width: 100%;
+  height: 350rpx;
+}
+.tuijianbox{
+  position:relative;
+  margin-top: 35rpx;
+  width: 100%;
+  height: 200px;
+  background-color: rgba(1, 173, 258, 0.658);
+}
+
+.table {
+  border: 0px solid darkgray;
+  font-size: 12px;
+  background-color: rgba(1, 175, 255, 0.507);
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 2rem;
+  align-items: center;
+}
+.td {
+    width:40%;
+    justify-content: center;
+    text-align: center;
+}
+.bg-w{
+  background: snow;
+}
+ 
+.th {
+  width: 40%;
+  justify-content: center;
+  background: rgba(51, 102, 255, 0.808);
+  color: #fff;
+  display: flex;
+  height: 2rem;
+  align-items: center;
+}
+
+/*课程cell*/
+.item{
+ background: white;
+ height: 80px;
+   display: flex;
+   flex-direction: row;
+   padding: 5px 0 5px 5px;
+   border-top: 0.5px solid rgb(245, 245, 245);
+   /*y轴对齐方式*/
+  /*align-items: center; */
+  /*x轴对齐方式*/
+  /*justify-content: space-between;*/ 
+}
+
+/*图片背景View*/
+.item-left{
+  width: 80px;
+  height: 80px;
+}
+
+/*课程图片*/
+.courseImage{
+
+  width: 100%;
+  height: 100%;
+}
+
+/*右边item*/
+.item-right{
+  margin-left: 10px;
+  flex: 1; /*占满两侧空白部分*/
+}
+
+/*右边item的view*/
+.item-right view{
+  
+}
+
+/*时间*/
+.timeText{
+ font-size: 11px;
+ color: darkgray;
+
+}
+
+/*年级*/
+.gradeText{
+  font-size: 11px;
+  color: rgb(0, 0, 0);
+}
+/*价格*/
+.priceText{
+  font-size: 13px;
+  color: red;
+  float: right;
+  padding-right: 10px;
+}

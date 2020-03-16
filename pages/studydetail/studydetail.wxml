@@ -1,0 +1,103 @@
+<!--pages/order/order.wxml-->
+<view class="swiper-tab">
+  <block wx:for="{{swipertab}}" wx:key="sptab">
+    <view class="swiper-tab-list {{currtab == item.index ? 'on' : ''}}" data-current="{{item.index}}" bindtap="tabSwitch">{{item.name}}
+    </view>
+    <image class='pic' src="{{item.pic}}"></image>
+  </block>
+</view>
+
+<swiper current="{{currtab}}" class="swiper-box" duration="300" style="height:{{deviceH-31}}px" bindchange="tabChange">
+
+  <!-- 任务 -->
+  <swiper-item>
+    <scroll-view class="hot-box" scroll-y="true">
+
+      <view class="orderListDetails" bindtap='totaolun'>
+        <view class="productImg">
+          <image src="/images/ICON/tl.jpg" background-size="cover"></image>
+        </view>
+        <view class="productInfo">
+          <text class="productPrice">讨论</text>
+        </view>
+      </view>
+
+      <view class='line'></view>
+
+      <view class="orderDetails" wx:for="{{alreadyOrder}}" wx:key=" " bindtap='totest'>
+        <view class="orderListDetails">
+          <view class="productImg">
+            <image src="{{item.pic}}" background-size="cover"></image>
+          </view>
+          <view class="productInfo">
+            <view class="productTitle">{{item.ordertime}}</view>
+            <text class="productPrice">{{item.orderstate}}</text>
+          </view>
+        </view>
+
+        <view class='line'></view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+
+  <!-- 章节 -->
+  <swiper-item>
+    <scroll-view class="hot-box" scroll-y="true">
+      <view class="orderDetails" wx:for="{{waitPayOrder}}" wx:key=" ">
+
+        <view class="orderListDetails">
+
+          <view class="productInfo" bindtap='tozhangjie'>
+            <view class="productTitle">{{item.orderstate}}</view>
+            <text class="productPrice">{{item.state}}</text>
+          </view>
+
+        </view>
+        <view class='line'></view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <!-- 取消 -->
+  <swiper-item>
+    <scroll-view class="hot-box" scroll-y="true">
+
+      <view class="orderListDetails" bindtap='todayi'>
+        <view class="productImg1">
+          <image src="/images/ICON/dayi.jpg" background-size="cover"></image>
+        </view>
+        <view class="productInfo">
+          <text class="productPrice">答疑</text>
+        </view>
+      </view>
+      <view class='line'></view>
+
+      <view class="orderListDetails" bindtap='tojilu'>
+        <view class="productImg1">
+          <image src="/images/ICON/jilu.jpg" background-size="cover"></image>
+        </view>
+        <view class="productInfo">
+          <text class="productPrice" >学习记录</text>
+        </view>
+      </view>
+      <view class='line'></view>
+
+      <view class="orderListDetails">
+        <view class="productInfo">
+          <view class="productTitle">课程开始时间：{{classdetail.stime}}</view>
+          <text class="productPrice">课程结束时间：{{classdetail.etime}}</text>
+        </view>
+      </view>
+      <view class='line'></view>
+
+      <view class="orderListDetails">
+        <view class="productInfo">
+          <view class="productTitle">当前学习进度：{{classdetail.jindu}}</view>
+          <text class="productPrice">当前得分：{{classdetail.fen}}</text>
+        </view>
+      </view>
+      <view class='line'></view>
+
+
+    </scroll-view>
+  </swiper-item>
+</swiper>
